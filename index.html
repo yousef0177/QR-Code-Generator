@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#120a24" />
+  <title>کیوآرساز | تبدیل هر چیزی به کد QR</title>
+  <meta name="description" content="ساخت کد QR باکیفیت از لینک، وای‌فای، تصویر، کارت ویزیت و شماره تماس؛ با دانلود تصویر باکیفیت و اشتراک‌گذاری مستقیم در تلگرام." />
+  <meta property="og:title" content="کیوآرساز | تبدیل هر چیزی به کد QR" />
+  <meta property="og:description" content="لینک، وای‌فای، تصویر، کارت ویزیت و شماره تماس را با کیفیت بالا به کد QR تبدیل کنید." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%23e879f9'/%3E%3Cstop%20offset='1'%20stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20x='2'%20y='2'%20width='60'%20height='60'%20rx='16'%20fill='%23150b28'/%3E%3Crect%20x='2'%20y='2'%20width='60'%20height='60'%20rx='16'%20fill='none'%20stroke='url(%23g)'%20stroke-width='2.5'%20opacity='.85'/%3E%3Cg%20fill='url(%23g)'%3E%3Crect%20x='12'%20y='12'%20width='16'%20height='16'%20rx='4'/%3E%3Crect%20x='36'%20y='12'%20width='16'%20height='16'%20rx='4'/%3E%3Crect%20x='12'%20y='36'%20width='16'%20height='16'%20rx='4'/%3E%3Crect%20x='38'%20y='38'%20width='5'%20height='5'%20rx='1.5'/%3E%3Crect%20x='45'%20y='38'%20width='5'%20height='5'%20rx='1.5'/%3E%3Crect%20x='38'%20y='45'%20width='5'%20height='5'%20rx='1.5'/%3E%3Crect%20x='45'%20y='45'%20width='5'%20height='5'%20rx='1.5'/%3E%3C/g%3E%3Cg%20fill='%23150b28'%3E%3Crect%20x='16'%20y='16'%20width='8'%20height='8'%20rx='2'/%3E%3Crect%20x='40'%20y='16'%20width='8'%20height='8'%20rx='2'/%3E%3Crect%20x='16'%20y='40'%20width='8'%20height='8'%20rx='2'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- پس‌زمینه متحرک -->
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-gradient"></div>
+    <div class="grid-overlay"></div>
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="blob blob-c"></div>
+  </div>
+
+  <!-- آیکون‌های SVG -->
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="i-qr" viewBox="0 0 24 24">
+        <rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/>
+        <path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/>
+      </symbol>
+      <symbol id="i-link" viewBox="0 0 24 24">
+        <path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/>
+      </symbol>
+      <symbol id="i-wifi" viewBox="0 0 24 24">
+        <path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.559a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/>
+      </symbol>
+      <symbol id="i-image" viewBox="0 0 24 24">
+        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+      </symbol>
+      <symbol id="i-vcard" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2.2"/><path d="M15 8.5h3.5"/><path d="M15 12h3.5"/><path d="M6 16.2c.8-1.4 2.1-2.1 3-2.1s2.2.7 3 2.1"/>
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </symbol>
+      <symbol id="i-type" viewBox="0 0 24 24">
+        <path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/>
+      </symbol>
+      <symbol id="i-download" viewBox="0 0 24 24">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/>
+      </symbol>
+      <symbol id="i-send" viewBox="0 0 24 24">
+        <path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24">
+        <rect width="13" height="13" x="9" y="9" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="M20 6 9 17l-5-5"/>
+      </symbol>
+      <symbol id="i-x" viewBox="0 0 24 24">
+        <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+      </symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>
+      </symbol>
+      <symbol id="i-eye-off" viewBox="0 0 24 24">
+        <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><path d="m2 2 20 20"/>
+      </symbol>
+      <symbol id="i-scan" viewBox="0 0 24 24">
+        <path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/>
+      </symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24">
+        <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="page">
+
+    <!-- هدر -->
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-logo"><svg class="icon"><use href="#i-qr"/></svg></span>
+        <div>
+          <h1 class="brand-title">کیوآرساز</h1>
+          <p class="brand-sub">هر چیزی را به کد QR تبدیل کن</p>
+        </div>
+      </div>
+      <span class="chip">
+        <svg class="icon"><use href="#i-scan"/></svg>
+        سازگار با دوربین همه گوشی‌ها
+      </span>
+    </header>
+
+    <main class="layout">
+
+      <!-- کارت فرم -->
+      <section class="glass-card panel" aria-label="فرم ساخت کد QR">
+        <div class="tabs" role="tablist" aria-label="انتخاب نوع محتوا">
+          <button type="button" class="tab active" role="tab" aria-selected="true" data-mode="link">
+            <svg class="icon"><use href="#i-link"/></svg><span>لینک</span>
+          </button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-mode="wifi">
+            <svg class="icon"><use href="#i-wifi"/></svg><span>وای‌فای</span>
+          </button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-mode="image">
+            <svg class="icon"><use href="#i-image"/></svg><span>تصویر</span>
+          </button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-mode="vcard">
+            <svg class="icon"><use href="#i-vcard"/></svg><span>کارت ویزیت</span>
+          </button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-mode="phone">
+            <svg class="icon"><use href="#i-phone"/></svg><span>تماس</span>
+          </button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-mode="text">
+            <svg class="icon"><use href="#i-type"/></svg><span>متن</span>
+          </button>
+        </div>
+
+        <!-- لینک -->
+        <div class="mode-form" data-form="link">
+          <div class="field">
+            <label for="f-link-url">آدرس لینک</label>
+            <input id="f-link-url" class="input ltr" dir="ltr" inputmode="url" autocomplete="off" placeholder="example.com/page" />
+            <p class="hint">اگر https را ننویسی، خودکار اضافه می‌شود.</p>
+          </div>
+        </div>
+
+        <!-- وای‌فای -->
+        <div class="mode-form" data-form="wifi" hidden>
+          <div class="grid-2">
+            <div class="field">
+              <label for="f-wifi-ssid">نام شبکه (SSID)</label>
+              <input id="f-wifi-ssid" class="input ltr" dir="ltr" autocomplete="off" placeholder="MyWifi" />
+            </div>
+            <div class="field">
+              <label for="f-wifi-pass">رمز عبور</label>
+              <div class="input-wrap">
+                <input id="f-wifi-pass" class="input ltr input-eye" dir="ltr" type="password" autocomplete="off" placeholder="••••••••" />
+                <button type="button" class="eye-btn" id="wifi-eye" aria-label="نمایش رمز">
+                  <svg class="icon icon-show"><use href="#i-eye"/></svg>
+                  <svg class="icon icon-hide" hidden><use href="#i-eye-off"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-wifi-enc">نوع رمزنگاری</label>
+              <select id="f-wifi-enc" class="input select">
+                <option value="WPA" selected>WPA / WPA2 / WPA3</option>
+                <option value="WEP">WEP (قدیمی)</option>
+                <option value="nopass">بدون رمز</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="switch-row" for="f-wifi-hidden">
+                <span>شبکه مخفی است</span>
+                <input type="checkbox" id="f-wifi-hidden" class="switch-input" />
+                <span class="switch" aria-hidden="true"></span>
+              </label>
+            </div>
+          </div>
+          <p class="hint">با اسکن کد، گوشی به‌صورت خودکار به وای‌فای وصل می‌شود؛ نیازی به تایپ رمز نیست.</p>
+        </div>
+
+        <!-- تصویر -->
+        <div class="mode-form" data-form="image" hidden>
+          <div class="dropzone" id="img-dropzone" tabindex="0" role="button" aria-label="انتخاب تصویر">
+            <span class="dz-icon"><svg class="icon"><use href="#i-image"/></svg></span>
+            <span class="dz-title">تصویر را بکش و اینجا رها کن یا کلیک کن</span>
+            <span class="dz-sub">PNG، JPG، WebP یا GIF تا ۵ مگابایت</span>
+          </div>
+          <div class="img-preview" id="img-preview" hidden>
+            <img id="img-thumb" alt="پیش‌نمایش تصویر انتخاب‌شده" />
+            <span class="chip-uploaded"><svg class="icon"><use href="#i-check"/></svg> تصویر انتخاب شد</span>
+            <button type="button" class="btn-remove" id="img-remove" aria-label="حذف تصویر">
+              <svg class="icon"><use href="#i-x"/></svg>
+            </button>
+          </div>
+          <input type="file" id="img-file" accept="image/png,image/jpeg,image/webp,image/gif" class="sr-only" aria-label="انتخاب فایل تصویر" />
+          <div class="field img-link-field">
+            <label for="f-img-link">لینک مقصد</label>
+            <input id="f-img-link" class="input ltr" dir="ltr" inputmode="url" autocomplete="off" placeholder="example.com/page" />
+            <p class="hint">تصویر انتخابی در وسط کد قرار می‌گیرد و با اسکن، این لینک باز می‌شود.</p>
+          </div>
+        </div>
+
+        <!-- کارت ویزیت -->
+        <div class="mode-form" data-form="vcard" hidden>
+          <div class="grid-2">
+            <div class="field span-2">
+              <label for="f-vc-name">نام و نام خانوادگی</label>
+              <input id="f-vc-name" class="input" autocomplete="off" placeholder="مثلاً سارا محمدی" />
+            </div>
+            <div class="field">
+              <label for="f-vc-phone">شماره موبایل</label>
+              <input id="f-vc-phone" class="input ltr" dir="ltr" inputmode="tel" autocomplete="off" placeholder="09121234567" />
+            </div>
+            <div class="field">
+              <label for="f-vc-email">ایمیل</label>
+              <input id="f-vc-email" class="input ltr" dir="ltr" inputmode="email" autocomplete="off" placeholder="sara@example.com" />
+            </div>
+            <div class="field">
+              <label for="f-vc-org">سازمان / شرکت</label>
+              <input id="f-vc-org" class="input" autocomplete="off" placeholder="اختیاری" />
+            </div>
+            <div class="field">
+              <label for="f-vc-title">سمت</label>
+              <input id="f-vc-title" class="input" autocomplete="off" placeholder="اختیاری" />
+            </div>
+            <div class="field">
+              <label for="f-vc-site">وب‌سایت</label>
+              <input id="f-vc-site" class="input ltr" dir="ltr" inputmode="url" autocomplete="off" placeholder="example.com" />
+            </div>
+            <div class="field">
+              <label for="f-vc-address">آدرس</label>
+              <input id="f-vc-address" class="input" autocomplete="off" placeholder="اختیاری" />
+            </div>
+          </div>
+          <p class="hint">با اسکن کد، اطلاعات به‌عنوان مخاطب جدید در گوشی ذخیره می‌شود.</p>
+        </div>
+
+        <!-- تماس -->
+        <div class="mode-form" data-form="phone" hidden>
+          <div class="field">
+            <label for="f-phone-num">شماره تماس</label>
+            <input id="f-phone-num" class="input ltr input-lg" dir="ltr" type="tel" inputmode="tel" autocomplete="off" placeholder="09121234567" />
+            <p class="hint">با اسکن کد، صفحه تماس مستقیم باز می‌شود.</p>
+          </div>
+        </div>
+
+        <!-- متن -->
+        <div class="mode-form" data-form="text" hidden>
+          <div class="field">
+            <label for="f-text-value">متن دلخواه</label>
+            <textarea id="f-text-value" class="input textarea" rows="5" placeholder="متن خود را بنویسید…"></textarea>
+            <p class="hint">هر متنی؛ پیام، یادداشت، کد تخفیف و…</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- کارت پیش‌نمایش -->
+      <aside class="preview-col" aria-label="پیش‌نمایش کد QR">
+        <div class="glass-card preview-card">
+          <div class="qr-frame">
+            <canvas id="qr-canvas" hidden role="img" aria-label="کد QR ساخته‌شده"></canvas>
+            <div class="qr-empty" id="qr-empty">
+              <svg class="icon qr-empty-icon"><use href="#i-qr"/></svg>
+              <span>کد QR اینجا ظاهر می‌شود</span>
+            </div>
+          </div>
+          <p class="status" id="status-line" aria-live="polite">برای ساخت کد، اطلاعات را وارد کن</p>
+
+          <div class="actions">
+            <button type="button" class="btn btn-primary js-need-content" id="btn-download" disabled>
+              <svg class="icon"><use href="#i-download"/></svg>
+              دانلود PNG با کیفیت بالا
+            </button>
+            <button type="button" class="btn btn-telegram js-need-content" id="btn-telegram" disabled>
+              <svg class="icon icon-flip"><use href="#i-send"/></svg>
+              اشتراک‌گذاری در تلگرام
+            </button>
+            <button type="button" class="btn btn-ghost js-need-content" id="btn-copy" disabled>
+              <svg class="icon icon-copy"><use href="#i-copy"/></svg>
+              <svg class="icon icon-check" hidden><use href="#i-check"/></svg>
+              <span id="copy-label">کپی محتوا</span>
+            </button>
+          </div>
+          <p class="caption">خروجی PNG با ابعاد ۲۰۴۸×۲۰۴۸ پیکسل و اصلاح خطای سطح H؛ دکمه تلگرام محتوا یا تصویر کد را مستقیم به اشتراک می‌گذارد.</p>
+        </div>
+      </aside>
+    </main>
+
+    <!-- ویژگی‌ها -->
+    <section class="features" aria-label="ویژگی‌ها">
+      <div class="feature-card">
+        <span class="feature-icon"><svg class="icon"><use href="#i-qr"/></svg></span>
+        <div>
+          <h3>شش حالت آماده</h3>
+          <p>لینک، وای‌فای، تصویر، کارت ویزیت، تماس و متن</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg class="icon"><use href="#i-zap"/></svg></span>
+        <div>
+          <h3>پاسخ لحظه‌ای</h3>
+          <p>پیش‌نمایش کد همان لحظه با تایپ به‌روز می‌شود</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg class="icon"><use href="#i-download"/></svg></span>
+        <div>
+          <h3>کیفیت بالا</h3>
+          <p>خروجی PNG با ابعاد ۲۰۴۸ پیکسل و اصلاح خطای H</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg class="icon"><use href="#i-send"/></svg></span>
+        <div>
+          <h3>اشتراک در تلگرام</h3>
+          <p>ارسال مستقیم محتوا یا تصویر کد به تلگرام</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="site-footer">
+      <p>کیوآرساز — تبدیل سریع هر چیزی به کد QR با رابط شیشه‌ای، دانلود باکیفیت و اشتراک‌گذاری مستقیم در تلگرام</p>
+    </footer>
+  </div>
+
+  <!-- اعلان‌ها -->
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+</body>
+</html>
